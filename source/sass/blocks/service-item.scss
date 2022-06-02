@@ -1,0 +1,21 @@
+.service-item {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  transition: 0.25s;
+
+  &:hover > * {
+    backdrop-filter: hue-rotate(-45deg);
+  }
+
+  &__title {
+    position: relative;
+
+    &::before {
+      content: '/';
+      position: absolute;
+      left: -16px;
+      color: $secondary;
+    }
+  }
+}

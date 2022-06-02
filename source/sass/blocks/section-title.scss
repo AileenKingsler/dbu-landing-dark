@@ -1,0 +1,25 @@
+.section-title {
+  font-size: calc(48rem / 16);
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  margin-bottom: $headings-margin-bottom;
+  margin-bottom: 1em;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    font-size: calc(40rem / 16);
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: calc(32rem / 16);
+  }
+
+  @include media-breakpoint-up(lg) {
+    &::before {
+      content: '/';
+      position: absolute;
+      left: -30px;
+      color: $secondary;
+    }
+  }
+}
