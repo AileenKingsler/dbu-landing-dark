@@ -1,0 +1,37 @@
+.about {
+  @include media-breakpoint-up(xl) {
+    background-image: linear-gradient(to right, transparent 50%, $primary 50%);
+
+    &__content {
+      padding-left: 120px;
+    }
+
+    &__img {
+      position: absolute;
+      right: calc(100% - 90px);
+      top: 50%;
+      transform: translateY(calc(-50% + 20px));
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-color: $primary;
+  }
+
+  &__link {
+    color: #fff;
+    transition: 0.25s;
+
+    &:hover {
+      color: $secondary;
+      text-decoration: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
