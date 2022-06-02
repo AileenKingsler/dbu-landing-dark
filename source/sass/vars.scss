@@ -30,10 +30,12 @@ $embed-responsive-aspect-ratios: ((1 1), (6 7));
 $font-sizes: (
   12: calc(12rem / 16),
   14: calc(14rem / 16),
+  18: calc(18rem / 16),
   20: calc(20rem / 16),
   24: calc(24rem / 16),
   28: calc(28rem / 16),
   32: calc(32rem / 16),
+  36: calc(36rem / 16),
   40: calc(40rem / 16),
   48: calc(48rem / 16),
 );
@@ -55,3 +57,5 @@ $input-bg: rgba(19, 17, 35, 0.63);
 $input-color: #fff;
 $input-placeholder-color: $input-color;
 $input-border-color: transparent;
+
+$btn-font-weight: 500;
