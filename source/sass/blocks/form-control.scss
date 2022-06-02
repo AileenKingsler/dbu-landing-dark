@@ -1,0 +1,16 @@
+.form-control {
+  &[name='name'],
+  &[name='phone'] {
+    padding-left: 55px;
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+  }
+
+  &[name='name'] {
+    background-image: url('../img/field-name.svg');
+  }
+
+  &[name='phone'] {
+    background-image: url('../img/field-phone.svg');
+  }
+}

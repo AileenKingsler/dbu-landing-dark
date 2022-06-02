@@ -1,0 +1,11 @@
+.navbar {
+  &-phone {
+    color: #fff;
+    transition: 0.25s;
+
+    &:hover {
+      text-decoration: none;
+      color: $secondary;
+    }
+  }
+}

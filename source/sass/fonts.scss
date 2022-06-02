@@ -8,6 +8,14 @@
 
 @font-face {
   font-family: 'Onest';
+  src: url('../fonts/OnestLight1602-hint.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Onest';
   src: url('../fonts/OnestMedium1602-hint.woff') format('woff');
   font-weight: 500;
   font-style: normal;

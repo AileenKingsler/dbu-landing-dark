@@ -1,0 +1,12 @@
+.social-list {
+  gap: 10px;
+
+  &__link {
+    color: #fff;
+    transition: 0.25s;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
