@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'jquery.fancybox.scss';
 @import 'global';
 @import 'helpers/fs';
 @import 'helpers/font-weight';
@@ -13,3 +14,5 @@
 @import 'blocks/service-item';
 @import 'blocks/about';
 @import 'blocks/objects';
+@import 'blocks/clients';
+@import 'blocks/works';

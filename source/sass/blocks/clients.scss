@@ -1,0 +1,10 @@
+.clients {
+  &__logo {
+    filter: grayscale(1);
+    transition: 0.25s;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
