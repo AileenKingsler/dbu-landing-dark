@@ -1,17 +1,21 @@
 .works {
+  --gap: 30px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 30px;
+  grid-template-rows: repeat(
+    5,
+    calc((var(--container-width) - 5 * var(--gap)) / 6)
+  );
   grid-template-areas:
     'img1 img1 img1 img1 img1 img2 img2 img3 img3 img4 img4 img4'
     'img1 img1 img1 img1 img1 img7 img7 img7 img7 img7 img7 img7'
     'img5 img5 img5 img6 img6 img7 img7 img7 img7 img7 img7 img7'
     'img8 img8 img8 img8 img8 img8 img8 img9 img9 img9 img9 img9'
     'img8 img8 img8 img8 img8 img8 img8 img9 img9 img9 img9 img9';
+  gap: var(--gap);
 
   @include media-breakpoint-down(sm) {
-    gap: 10px;
+    --gap: 10px;
   }
 
   &__item {
