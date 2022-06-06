@@ -1,0 +1,23 @@
+.contacts {
+  &__map {
+    position: relative;
+    z-index: 1;
+    filter: grayscale(1);
+
+    &-container {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        width: 205px;
+        height: 182px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-image: url('../img/dots.svg');
+      }
+    }
+  }
+}

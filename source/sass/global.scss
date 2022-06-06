@@ -21,3 +21,20 @@ html {
 .lh-narrow {
   line-height: $headings-line-height;
 }
+
+.white-link {
+  color: #fff;
+  transition: 0.25s;
+
+  &:hover {
+    text-decoration: none;
+    color: $secondary;
+  }
+}
+
+.bg-lines {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-image: url('../img/lines.svg');
+}
