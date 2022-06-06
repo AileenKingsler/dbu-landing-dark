@@ -1,0 +1,14 @@
+.objects {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-image: url('../img/objects/objects-bg.svg');
+
+  @include media-breakpoint-up(sm) {
+    &__img {
+      height: 190px;
+      object-fit: scale-down;
+      object-position: left bottom;
+    }
+  }
+}
