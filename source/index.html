@@ -64,7 +64,7 @@
             <span>Бесплатный просчет <br>и составление сметы</span>
           </li>
         </ul>
-        <form class="header__form text-center mt-50p">
+        <form class="header__form form text-center mt-50p">
           <p class="fs-md-32 fs-sm-28 fs-24 font-weight-500 mb-0">Нужна консультация?</p>
           <p class="font-weight-300 mb-0">Оставьте контактные данные и мы перезвоним в ближайшее время</p>
           <div class="row justify-content-center mt-30p">
@@ -191,14 +191,14 @@
     </ol>
     <div class="row justify-content-center mt-50p mb-n3">
       <div class="col-auto mb-3">
-        <button class="btn btn-secondary btn-xl" type="button">
+        <a href="#" class="btn btn-secondary btn-xl d-flex align-items-center justify-content-center">
           Пример стоимости установки <br>квартирного счетчика тепла
-        </button>
+        </a>
       </div>
       <div class="col-auto mb-3">
-        <button class="btn btn-primary btn-xl" type="button">
+        <a href="#" class="btn btn-primary btn-xl d-flex align-items-center justify-content-center">
           Пример стоимости общедомового <br>узла учета тепловой энергии
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -210,7 +210,7 @@
           <h2 class="section-title mb-4">Кто мы?</h2>
           <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
           <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-          <a href="#" class="about__link d-inline-flex align-items-center fs-lg-32 fs-28 mt-3">
+          <a href="#" class="about__link d-inline-flex align-items-center fs-lg-32 fs-28 mt-3" data-fancybox>
             <span class="mr-30p">Наши документы</span>
             <img src="img/about/arrow.svg" width="102" height="102" alt="">
           </a>
@@ -403,7 +403,7 @@
               </p>
             </li>
           </ul>
-          <button class="btn btn-lg btn-secondary d-inline-flex align-items-center mt-30p" type="button">
+          <button class="btn btn-lg btn-secondary d-inline-flex align-items-center mt-30p" type="button" data-toggle="modal" data-target="#questionModal">
             Заказать консультацию
             <svg class="ml-30p" width="42" height="8" fill="currentColor" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#btn-arrow"></use>
@@ -450,6 +450,55 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-primary text-white">
+        <div class="modal-header">
+          <div class="modal-title h5" id="questionModalLabel">Задать вопрос</div>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body pt-0">
+          <form class="modal-form">
+            <div class="form-group">
+              <label for="name-question">Имя</label>
+              <input type="text" class="form-control form-control-lg" id="name-question" name="name" placeholder="Иван Иванов">
+            </div>
+            <div class="form-group">
+              <label for="phone-question">Телефон <span class="text-danger">*</span></label>
+              <input type="text" class="form-control form-control-lg" id="phone-question" name="phone" placeholder="8-999-999-99-99" required>
+            </div>
+            <div class="form-group">
+              <label for="question-question">Ваш вопрос</label>
+              <textarea class="form-control form-control-lg" id="question-question" name="question"></textarea>
+            </div>
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="accept-question" checked required>
+              <label class="custom-control-label" for="accept-question">
+                Нажимая «Отправить» вы <a href="#">разрешаете нам обработать ваши данные</a>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-lg btn-block">Отправить</button>
+            <p class="send-success alert alert-success mt-3 mb-0">Ваше сообщение отправлено, в течение 5 минут наш консультант свяжется с Вами!</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <p class="alert alert-success text-center mb-0" role="alert">
+            Ваша заявка успешно отправлена!
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/scripts.min.js"></script>

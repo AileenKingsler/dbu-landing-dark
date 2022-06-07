@@ -57,7 +57,9 @@ $input-btn-font-size-lg: 1rem;
 
 $input-bg: rgba(19, 17, 35, 0.63);
 $input-color: #fff;
-$input-placeholder-color: $input-color;
+$input-placeholder-color: $text-muted;
 $input-border-color: transparent;
 
 $btn-font-weight: 500;
+
+$modal-header-border-width: 0;
