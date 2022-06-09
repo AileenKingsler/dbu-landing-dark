@@ -1,0 +1,62 @@
+.bg-animated {
+  position: relative;
+  overflow: hidden;
+
+  > *:not(.bg-animated__elements) {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__elements {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__square {
+    border: 4px solid #312f4d;
+    animation-timing-function: linear;
+
+    &--1 {
+      width: 500px;
+      height: 500px;
+      animation: move 100s infinite;
+    }
+
+    &--2 {
+      width: 1110px;
+      height: 1110px;
+      animation: move 180s infinite;
+    }
+
+    &--3 {
+      width: 600px;
+      height: 600px;
+      animation: move 120s infinite;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+
+  50% {
+    width: 1000px;
+    height: 1000px;
+  }
+
+  100% {
+    transform: rotate(1000deg);
+    opacity: 1;
+  }
+}

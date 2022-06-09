@@ -13,13 +13,23 @@
 <body>
 
   <header class="header bg-dark text-white">
-    <div class="header__top">
+    <div class="header__carousel carousel" data-ride="carousel" data-pause="false">
+      <div class="carousel-inner">
+        <div class="carousel-item bg-dark active">
+          <img src="img/header/header-bg.webp" width="1920" height="978" class="d-block w-100 h-100" alt="">
+        </div>
+        <div class="carousel-item bg-dark">
+          <img src="img/header/header-bg-2.webp" width="1920" height="978" class="d-block w-100 h-100" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="header__top position-relative">
       <div class="container">
         <div class="row align-items-center flex-nowrap">
           <div class="col pr-0">
             <picture>
-              <source media="(max-width: 575px)" srcset="img/logo-mobile.svg" width="49">
-              <img class="img-fluid" src="img/logo.svg" width="249" alt="">
+              <source media="(max-width: 575px)" srcset="img/logo-mobile.svg" width="49" height="73">
+              <img class="img-fluid" src="img/logo.svg" width="249" height="73" alt="">
             </picture>
           </div>
           <div class="col-auto text-right">
@@ -47,7 +57,7 @@
         </div>
       </div>
     </div>
-    <div class="header__content">
+    <div class="header__content position-relative">
       <div class="container">
         <h1 class="fs-lg-48 fs-md-40 fs-sm-32 fs-28 text-center mb-0">Установка общедомовых и квартирных <br>счетчиков и узлов учета тепла</h1>
         <ul class="row justify-content-center list-unstyled mb-n3 mt-30p">
@@ -75,10 +85,13 @@
               <input class="form-control form-control-lg" type="tel" name="phone" placeholder="Ваш телефон" required>
             </div>
             <div class="form-group col-xl-3 col-md-4 col-sm-6">
-              <button class="btn btn-lg btn-secondary btn-block d-inline-flex align-items-center" type="submit">
+              <button class="btn-stroke-animated btn btn-lg text-secondary w-100 d-inline-flex align-items-center" type="submit">
                 Отправить
                 <svg class="ml-auto" width="42" height="8" fill="currentColor" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#btn-arrow"></use>
+                </svg>
+                <svg class="btn-stroke-animated__border">
+                  <rect x="0" y="0" fill="none" width="100%" height="100%" />
                 </svg>
               </button>
             </div>
@@ -92,47 +105,59 @@
   <section class="container pt-lg-80p mb-lg-80p pt-50p mb-50p">
     <h2 class="section-title">Какие услуги мы оказываем?</h2>
     <ul class="row list-unstyled mb-n30p">
-      <li class="col-lg-4 col-sm-6 mb-30p">
-        <div class="service-item rounded bg-dark text-white embed-responsive embed-responsive-6by7" style="background-image: url(img/services/service-1.png);">
-          <div class="p-30p fs-md-24 fs-20 font-weight-500 lh-narrow d-flex justify-content align-items-end embed-responsive-item">
-            <p class="service-item__title mb-0">Монтаж общедомых счетчиков тепла, ИТП, ЦТП</p>
-          </div>
-        </div>
+      <li class="col-lg-4 col-md-6 mb-30p">
+        <figure class="service-item position-relative overflow-hidden mb-0">
+          <img class="service-item__img img-fluid w-100" src="img/services/service-1.webp" width="410" height="476" alt="" loading="lazy" />
+          <figcaption class="service-item__content">
+            <p class="service-item__title fs-md-24 fs-20 font-weight-500 lh-narrow mb-0">Монтаж общедомых счетчиков тепла, ИТП, ЦТП</p>
+            <p class="service-item__text mt-10p mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </figcaption>
+        </figure>
       </li>
-      <li class="col-lg-4 col-sm-6 mb-30p">
-        <div class="service-item rounded bg-dark text-white embed-responsive embed-responsive-6by7" style="background-image: url(img/services/service-2.png);">
-          <div class="p-30p fs-md-24 fs-20 font-weight-500 lh-narrow d-flex justify-content align-items-end embed-responsive-item">
-            <p class="service-item__title mb-0">Монтаж квартирных счетчиков тепла</p>
-          </div>
-        </div>
+      <li class="col-lg-4 col-md-6 mb-30p">
+        <figure class="service-item position-relative overflow-hidden mb-0">
+          <img class="service-item__img img-fluid w-100" src="img/services/service-2.webp" width="410" height="476" alt="" loading="lazy" />
+          <figcaption class="service-item__content">
+            <p class="service-item__title fs-md-24 fs-20 font-weight-500 lh-narrow mb-0">Монтаж квартирных счетчиков тепла</p>
+            <p class="service-item__text mt-10p mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </figcaption>
+        </figure>
       </li>
-      <li class="col-lg-4 col-sm-6 mb-30p">
-        <div class="service-item rounded bg-dark text-white embed-responsive embed-responsive-6by7" style="background-image: url(img/services/service-3.png);">
-          <div class="p-30p fs-md-24 fs-20 font-weight-500 lh-narrow d-flex justify-content align-items-end embed-responsive-item">
-            <p class="service-item__title mb-0">Поверка счетчиков тепла и воды</p>
-          </div>
-        </div>
+      <li class="col-lg-4 col-md-6 mb-30p">
+        <figure class="service-item position-relative overflow-hidden mb-0">
+          <img class="service-item__img img-fluid w-100" src="img/services/service-3.webp" width="410" height="476" alt="" loading="lazy" />
+          <figcaption class="service-item__content">
+            <p class="service-item__title fs-md-24 fs-20 font-weight-500 lh-narrow mb-0">Поверка счетчиков тепла и воды</p>
+            <p class="service-item__text mt-10p mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </figcaption>
+        </figure>
       </li>
-      <li class="col-lg-4 col-sm-6 mb-30p">
-        <div class="service-item rounded bg-dark text-white embed-responsive embed-responsive-6by7" style="background-image: url(img/services/service-4.png);">
-          <div class="p-30p fs-md-24 fs-20 font-weight-500 lh-narrow d-flex justify-content align-items-end embed-responsive-item">
-            <p class="service-item__title mb-0">Замена счетчиков тепла</p>
-          </div>
-        </div>
+      <li class="col-lg-4 col-md-6 mb-30p">
+        <figure class="service-item position-relative overflow-hidden mb-0">
+          <img class="service-item__img img-fluid w-100" src="img/services/service-4.webp" width="410" height="476" alt="" loading="lazy" />
+          <figcaption class="service-item__content">
+            <p class="service-item__title fs-md-24 fs-20 font-weight-500 lh-narrow mb-0">Замена счетчиков тепла</p>
+            <p class="service-item__text mt-10p mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </figcaption>
+        </figure>
       </li>
-      <li class="col-lg-4 col-sm-6 mb-30p">
-        <div class="service-item rounded bg-dark text-white embed-responsive embed-responsive-6by7" style="background-image: url(img/services/service-5.png);">
-          <div class="p-30p fs-md-24 fs-20 font-weight-500 lh-narrow d-flex justify-content align-items-end embed-responsive-item">
-            <p class="service-item__title mb-0">Ремонт счетчиков</p>
-          </div>
-        </div>
+      <li class="col-lg-4 col-md-6 mb-30p">
+        <figure class="service-item position-relative overflow-hidden mb-0">
+          <img class="service-item__img img-fluid w-100" src="img/services/service-5.webp" width="410" height="476" alt="" loading="lazy" />
+          <figcaption class="service-item__content">
+            <p class="service-item__title fs-md-24 fs-20 font-weight-500 lh-narrow mb-0">Ремонт счетчиков</p>
+            <p class="service-item__text mt-10p mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </figcaption>
+        </figure>
       </li>
-      <li class="col-lg-4 col-sm-6 mb-30p">
-        <div class="service-item rounded bg-dark text-white embed-responsive embed-responsive-6by7" style="background-image: url(img/services/service-6.png);">
-          <div class="p-30p fs-md-24 fs-20 font-weight-500 lh-narrow d-flex justify-content align-items-end embed-responsive-item">
-            <p class="service-item__title mb-0">Проектирование узлов учета</p>
-          </div>
-        </div>
+      <li class="col-lg-4 col-md-6 mb-30p">
+        <figure class="service-item position-relative overflow-hidden mb-0">
+          <img class="service-item__img img-fluid w-100" src="img/services/service-6.webp" width="410" height="476" alt="" loading="lazy" />
+          <figcaption class="service-item__content">
+            <p class="service-item__title fs-md-24 fs-20 font-weight-500 lh-narrow mb-0">Проектирование узлов учета</p>
+            <p class="service-item__text mt-10p mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </figcaption>
+        </figure>
       </li>
     </ul>
   </section>
@@ -144,7 +169,7 @@
         <p class="d-flex align-items-center fs-36 font-weight-300 lh-narrow">
           <span>01</span>
           <span class="text-secondary mx-2">/</span>
-          <img src="img/cost/cost-1.svg" width="46" height="46" alt="">
+          <img src="img/cost/cost-1.svg" width="46" height="46" loading="lazy" alt="">
         </p>
         <p class="mb-0">Прием заявки, консультация специалиста и согласование даты осмотра объекта</p>
       </li>
@@ -152,7 +177,7 @@
         <p class="d-flex align-items-center fs-36 font-weight-300 lh-narrow">
           <span>02</span>
           <span class="text-secondary mx-2">/</span>
-          <img src="img/cost/cost-2.svg" width="46" height="46" alt="">
+          <img src="img/cost/cost-2.svg" width="46" height="46" alt="" loading="lazy">
         </p>
         <p class="mb-0">Выезд на объект осмотр и подбор оптимального варианта системы</p>
       </li>
@@ -160,7 +185,7 @@
         <p class="d-flex align-items-center fs-36 font-weight-300 lh-narrow">
           <span>03</span>
           <span class="text-secondary mx-2">/</span>
-          <img src="img/cost/cost-3.svg" width="46" height="46" alt="">
+          <img src="img/cost/cost-3.svg" width="46" height="46" alt="" loading="lazy">
         </p>
         <p class="mb-0">Согласование пожеланий клиента, точный расчет проекта и составление сметы</p>
       </li>
@@ -168,7 +193,7 @@
         <p class="d-flex align-items-center fs-36 font-weight-300 lh-narrow">
           <span>04</span>
           <span class="text-secondary mx-2">/</span>
-          <img src="img/cost/cost-4.svg" width="46" height="46" alt="">
+          <img src="img/cost/cost-4.svg" width="46" height="46" alt="" loading="lazy">
         </p>
         <p class="mb-0">Заключение договора и внесение предоплаты за оборудование</p>
       </li>
@@ -176,7 +201,7 @@
         <p class="d-flex align-items-center fs-36 font-weight-300 lh-narrow">
           <span>05</span>
           <span class="text-secondary mx-2">/</span>
-          <img src="img/cost/cost-5.svg" width="46" height="46" alt="">
+          <img src="img/cost/cost-5.svg" width="46" height="46" alt="" loading="lazy">
         </p>
         <p class="mb-0">Доставка, монтаж и пуско-наладка инженерных систем</p>
       </li>
@@ -184,19 +209,19 @@
         <p class="d-flex align-items-center fs-36 font-weight-300 lh-narrow">
           <span>06</span>
           <span class="text-secondary mx-2">/</span>
-          <img src="img/cost/cost-6.svg" width="46" height="46" alt="">
+          <img src="img/cost/cost-6.svg" width="46" height="46" alt="" loading="lazy">
         </p>
         <p class="mb-0">Подписание акта, итоговые расчеты, инструнтаж и сервисное осблуживание</p>
       </li>
     </ol>
     <div class="row justify-content-center mt-50p mb-n3">
       <div class="col-auto mb-3">
-        <a href="#" class="btn btn-secondary btn-xl d-flex align-items-center justify-content-center">
+        <a href="#" class="btn-slide-aninmated btn-slide-aninmated--secondary btn btn-xl d-flex align-items-center justify-content-center">
           Пример стоимости установки <br>квартирного счетчика тепла
         </a>
       </div>
       <div class="col-auto mb-3">
-        <a href="#" class="btn btn-primary btn-xl d-flex align-items-center justify-content-center">
+        <a href="#" class="btn-slide-aninmated btn btn-xl d-flex align-items-center justify-content-center">
           Пример стоимости общедомового <br>узла учета тепловой энергии
         </a>
       </div>
@@ -212,9 +237,9 @@
           <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
           <a href="#" class="about__link d-inline-flex align-items-center fs-lg-32 fs-28 mt-3" data-fancybox>
             <span class="mr-30p">Наши документы</span>
-            <img src="img/about/arrow.svg" width="102" height="102" alt="">
+            <img src="img/about/arrow.svg" width="102" height="102" alt="" loading="lazy">
           </a>
-          <img class="about__img d-none d-xl-block" src="img/about/about.png" width="822" height="917" alt="">
+          <img class="about__img d-none d-xl-block" src="img/about/about.webp" width="822" height="917" alt="" loading="lazy">
         </div>
       </div>
     </div>
@@ -224,73 +249,78 @@
     <h2 class="section-title">Наши преимущества</h2>
     <ul class="row list-unstyled fs-18 mb-n30p">
       <li class="col-lg-4 col-sm-6 mb-30p">
-        <img class="mb-10p" src="img/features/feature-1.svg" width="80" height="80" alt="">
+        <img class="mb-10p" src="img/features/feature-1.svg" width="80" height="80" alt="" loading="lazy">
         <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Установка оборудования <br>за 2 дня</p>
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
       </li>
       <li class="col-lg-4 col-sm-6 mb-30p">
-        <img class="mb-10p" src="img/features/feature-2.svg" width="80" height="80" alt="">
+        <img class="mb-10p" src="img/features/feature-2.svg" width="80" height="80" alt="" loading="lazy">
         <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Гарантия на расчеты <br>от наших специалистов</p>
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
       </li>
       <li class="col-lg-4 col-sm-6 mb-30p">
-        <img class="mb-10p" src="img/features/feature-3.svg" width="80" height="80" alt="">
+        <img class="mb-10p" src="img/features/feature-3.svg" width="80" height="80" alt="" loading="lazy">
         <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Гарантия на расчеты <br>от наших специалистов</p>
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
       </li>
       <li class="col-lg-4 col-sm-6 mb-30p">
-        <img class="mb-10p" src="img/features/feature-4.svg" width="80" height="80" alt="">
+        <img class="mb-10p" src="img/features/feature-4.svg" width="80" height="80" alt="" loading="lazy">
         <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Бесплатная доставка <br>по всей стране</p>
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
       </li>
       <li class="col-lg-4 col-sm-6 mb-30p">
-        <img class="mb-10p" src="img/features/feature-5.svg" width="80" height="80" alt="">
+        <img class="mb-10p" src="img/features/feature-5.svg" width="80" height="80" alt="" loading="lazy">
         <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Экономичные <br>для вас решения</p>
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
       </li>
       <li class="col-lg-4 col-sm-6 mb-30p">
-        <img class="mb-10p" src="img/features/feature-6.svg" width="80" height="80" alt="">
+        <img class="mb-10p" src="img/features/feature-6.svg" width="80" height="80" alt="" loading="lazy">
         <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Экономичные <br>для вас решения</p>
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
       </li>
     </ul>
   </section>
 
-  <section class="bg-lines bg-primary text-white py-lg-100p py-50p mb-lg-80p mb-50p">
+  <section class="bg-animated bg-primary text-white py-lg-100p py-50p mb-lg-80p mb-50p">
     <div class="container">
       <h2 class="section-title">Работаем с объектами</h2>
       <ul class="objects row list-unstyled fs-18 mb-n30p">
         <li class="col-lg-4 col-sm-6 mb-30p">
-          <img class="objects__img img-fluid mb-10p" src="img/objects/object-1.png" width="190" height="190" alt="">
+          <img class="objects__img img-fluid mb-10p" src="img/objects/object-1.webp" width="190" height="190" alt="" loading="lazy">
           <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Квартиры</p>
           <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </li>
         <li class="col-lg-4 col-sm-6 mb-30p">
-          <img class="objects__img img-fluid mb-10p" src="img/objects/object-2.png" width="190" height="190" alt="">
+          <img class="objects__img img-fluid mb-10p" src="img/objects/object-2.webp" width="190" height="190" alt="" loading="lazy">
           <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Многоквартирные дома</p>
           <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </li>
         <li class="col-lg-4 col-sm-6 mb-30p">
-          <img class="objects__img img-fluid mb-10p" src="img/objects/object-3.png" width="231" height="154" alt="">
+          <img class="objects__img img-fluid mb-10p" src="img/objects/object-3.webp" width="231" height="154" alt="" loading="lazy">
           <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Котельные</p>
           <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </li>
         <li class="col-lg-4 col-sm-6 mb-30p">
-          <img class="objects__img img-fluid mb-10p" src="img/objects/object-4.png" width="167" height="116" alt="">
+          <img class="objects__img img-fluid mb-10p" src="img/objects/object-4.webp" width="167" height="116" alt="" loading="lazy">
           <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Объекты социального значения</p>
           <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </li>
         <li class="col-lg-4 col-sm-6 mb-30p">
-          <img class="objects__img img-fluid mb-10p" src="img/objects/object-5.png" width="190" height="96" alt="">
+          <img class="objects__img img-fluid mb-10p" src="img/objects/object-5.webp" width="190" height="96" alt="" loading="lazy">
           <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Складские комплексы</p>
           <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </li>
         <li class="col-lg-4 col-sm-6 mb-30p">
-          <img class="objects__img img-fluid mb-10p" src="img/objects/object-6.png" width="245" height="100" alt="">
+          <img class="objects__img img-fluid mb-10p" src="img/objects/object-6.webp" width="245" height="100" alt="" loading="lazy">
           <p class="fs-md-24 fs-20 lh-narrow font-weight-500 mb-10p">Другие нежилые помещения</p>
           <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </li>
       </ul>
+    </div>
+    <div class="bg-animated__elements">
+      <div class="bg-animated__square bg-animated__square--1"></div>
+      <div class="bg-animated__square bg-animated__square--2"></div>
+      <div class="bg-animated__square bg-animated__square--3"></div>
     </div>
   </section>
 
@@ -298,50 +328,50 @@
     <h2 class="section-title">Наши клиенты и работы</h2>
     <ul class="clients list-unstyled row align-items-center text-center mb-n30p">
       <li class="col-3 mb-30p">
-        <img class="clients__logo img-fluid" src="img/clients/ABB.svg" alt="">
+        <img class="clients__logo img-fluid" src="img/clients/ABB.svg" width="214" height="84" alt="" loading="lazy">
       </li>
       <li class="col-3 mb-30p">
-        <img class="clients__logo img-fluid" src="img/clients/Legrand.svg" alt="">
+        <img class="clients__logo img-fluid" src="img/clients/Legrand.svg" width="277" height="70" alt="" loading="lazy">
       </li>
       <li class="col-3 mb-30p">
-        <img class="clients__logo img-fluid" src="img/clients/Schneider-Electric.svg" alt="">
+        <img class="clients__logo img-fluid" src="img/clients/Schneider-Electric.svg" width="253" height="76" alt="" loading="lazy">
       </li>
       <li class="col-3 mb-30p">
-        <img class="clients__logo img-fluid" src="img/clients/era.svg" alt="">
+        <img class="clients__logo img-fluid" src="img/clients/era.svg" width="210" height="100" alt="" loading="lazy">
       </li>
     </ul>
     <div class="works mt-lg-50p mt-30p">
-      <a class="works__item rounded bg-dark" href="img/works/work-1.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-1.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-1.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-1.webp" width="520" height="424" alt="Работа №1" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-2.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-2.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-2.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-2.webp" width="190" height="194" alt="Работа №2" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-3.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-3.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-3.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-3.webp" width="190" height="194" alt="Работа №3" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-4.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-4.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-4.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-4.webp" width="300" height="194" alt="Работа №4" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-5.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-5.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-5.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-5.webp" width="300" height="194" alt="Работа №5" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-6.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-6.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-6.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-6.webp" width="190" height="194" alt="Работа №6" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-7.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-7.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-7.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-7.webp" width="740" height="424" alt="Работа №7" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-8.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-8.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-8.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-8.webp" width="761" height="424" alt="Работа №8" loading="lazy">
       </a>
-      <a class="works__item rounded bg-dark" href="img/works/work-9.png" data-fancybox="works">
-        <img class="rounded" src="img/works/work-9.png" alt="">
+      <a class="works__item rounded bg-dark" href="img/works/work-9.webp" data-fancybox="works">
+        <img class="rounded" src="img/works/work-9.webp" width="499" height="424" alt="Работа №9" loading="lazy">
       </a>
     </div>
   </section>
 
-  <div class="contacts bg-lines bg-primary text-white overflow-hidden">
+  <div class="contacts bg-animated bg-primary text-white">
     <section class="container py-lg-100p py-50p">
       <div class="row">
         <div class="col-lg-7 col-md-6">
@@ -403,16 +433,19 @@
               </p>
             </li>
           </ul>
-          <button class="btn btn-lg btn-secondary d-inline-flex align-items-center mt-30p" type="button" data-toggle="modal" data-target="#questionModal">
+          <button class="btn-stroke-animated btn btn-lg text-secondary d-inline-flex align-items-center mt-30p" type="button" data-toggle="modal" data-target="#questionModal">
             Заказать консультацию
             <svg class="ml-30p" width="42" height="8" fill="currentColor" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#btn-arrow"></use>
+            </svg>
+            <svg class="btn-stroke-animated__border">
+              <rect x="0" y="0" fill="none" width="100%" height="100%" />
             </svg>
           </button>
         </div>
         <div class="col-lg-5 col-md-6 mt-50p mt-md-0">
           <div class="contacts__map-container">
-            <iframe class="contacts__map d-block rounded" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f5733bc9eb708074b14bb5e0203013b79d7380a2a08d69c3fea3f1d316386c4&amp;source=constructor" width="100%" height="620" frameborder="0"></iframe>
+            <iframe class="contacts__map d-block rounded" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f5733bc9eb708074b14bb5e0203013b79d7380a2a08d69c3fea3f1d316386c4&amp;source=constructor" width="100%" height="620" frameborder="0" title="Адрес на карте"></iframe>
           </div>
         </div>
       </div>
@@ -422,8 +455,8 @@
       <div class="row align-items-center flex-nowrap">
         <div class="col pr-0">
           <picture>
-            <source media="(max-width: 575px)" srcset="img/logo-mobile.svg" width="49">
-            <img class="img-fluid" src="img/logo.svg" width="249" alt="">
+            <source media="(max-width: 575px)" srcset="img/logo-mobile.svg" width="49" height="73">
+            <img class="img-fluid" src="img/logo.svg" width="249" height="73" alt="" loading="lazy">
           </picture>
         </div>
         <div class="col-auto text-right">
@@ -450,6 +483,12 @@
         </div>
       </div>
     </footer>
+
+    <div class="bg-animated__elements">
+      <div class="bg-animated__square bg-animated__square--1"></div>
+      <div class="bg-animated__square bg-animated__square--2"></div>
+      <div class="bg-animated__square bg-animated__square--3"></div>
+    </div>
   </div>
 
   <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">

@@ -1,5 +1,11 @@
 $(function () {
 
+  transformServiceContent();
+
+  $(window).resize(function () {
+    transformServiceContent();
+  });
+
   $('.form').submit(function () {
     var th = $(this);
 
@@ -38,3 +44,10 @@ $(function () {
   });
 
 });
+
+function transformServiceContent() {
+  $('.service-item__text').each(function () {
+    const shift = $(this).innerHeight() + parseInt($(this).css("marginTop"));
+    $(this).parent('.service-item__content').css('transform', `translateY(${shift}px)`);
+  });
+}

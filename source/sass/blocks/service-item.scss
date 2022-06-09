@@ -1,7 +1,19 @@
 .service-item {
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
+  background-image: linear-gradient(135deg, rgba($dark, 0.95) 40%, $dark 40%);
+  color: #fff;
+
+  &__img {
+    opacity: 0.15;
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    transition: 0.35s;
+  }
 
   &__title {
     position: relative;
@@ -13,5 +25,18 @@
       color: $secondary;
       font-weight: normal;
     }
+  }
+
+  &__text {
+    opacity: 0;
+    transition: 0.35s;
+  }
+
+  &:hover &__content {
+    transform: translateY(0) !important;
+  }
+
+  &:hover &__text {
+    opacity: 1;
   }
 }
