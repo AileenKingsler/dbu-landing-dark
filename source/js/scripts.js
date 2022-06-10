@@ -63,6 +63,10 @@ function checkElementLocation() {
   var bottomOfWindow = $(window).scrollTop() + windowHeight;
 
   $('[data-animation]').each(function () {
+    $(this).addClass('opacity-0');
+  });
+
+  $('[data-animation]').each(function () {
     var topOfObject = $(this).offset().top + windowHeight / 6;
 
     if (bottomOfWindow > topOfObject) {
