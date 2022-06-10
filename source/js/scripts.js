@@ -1,12 +1,18 @@
 $(function () {
 
+  checkElementLocation();
+
+  $(window).on('scroll', function () {
+    checkElementLocation();
+  });
+
   transformServiceContent();
 
-  $(window).resize(function () {
+  $(window).on('resize', function () {
     transformServiceContent();
   });
 
-  $('.form').submit(function () {
+  $('.form').on('submit', function () {
     var th = $(this);
 
     $.ajax({
@@ -24,7 +30,7 @@ $(function () {
     return false;
   });
 
-  $('.modal-form').submit(function () {
+  $('.modal-form').on('submit', function () {
     var th = $(this);
 
     $.ajax({
@@ -49,5 +55,18 @@ function transformServiceContent() {
   $('.service-item__text').each(function () {
     const shift = $(this).innerHeight() + parseInt($(this).css("marginTop"));
     $(this).parent('.service-item__content').css('transform', `translateY(${shift}px)`);
+  });
+}
+
+function checkElementLocation() {
+  const windowHeight = $(window).height();
+  var bottomOfWindow = $(window).scrollTop() + windowHeight;
+
+  $('[data-animation]').each(function () {
+    var topOfObject = $(this).offset().top + windowHeight / 6;
+
+    if (bottomOfWindow > topOfObject) {
+      $(this).addClass('fade-in');
+    }
   });
 }
