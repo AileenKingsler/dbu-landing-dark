@@ -49,6 +49,10 @@ $(function () {
     return false;
   });
 
+  $('#questionModal').on('hidden.bs.modal', function (event) {
+    event.relatedTarget.blur();
+  });
+
 });
 
 function transformServiceContent() {
